@@ -10,14 +10,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
 
-    - uses: actions/checkout@v1
-      with:
-        fetch-depth: 1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-    - run: npm install
-
     - name: Setup Python
       uses: actions/setup-python@v1
       with:
@@ -35,9 +27,8 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
         python3 -m pip install -r requirements.txt
+        python3 -m pip install mkdocs
         python3 -m pip install mkdocs-material
-
-    - run: python3 setup.py install
 
     - run: mkdocs build --config-file ./mkdocs.yml
 
