@@ -8,19 +8,19 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-18.04
-    steps:
 
     - name: Setup Python
       uses: actions/setup-python@v1
       with:
         python-version: '3.6'
+        architecture: 'x64'
+
+    - name: Install dependencies
       run: |
-        python3 -m pip install --upgrade pip
-        python3 -m pip install -r requirements.txt
         python3 -m pip install mkdocs
         python3 -m pip install mkdocs-material
 
-    - run: mkdocs build --config-file ./mkdocs.yml
+    - run: mkdocs build
 
     - name: Deploy to GitHub Pages
       uses: docker://peaceiris/gh-pages:v2.4.0
