@@ -1,0 +1,35 @@
+site_name: Plan Assistant Help
+
+site_author: Tianlun Song
+
+# Repository
+repo_name: songtianlun/PlanAssistant-help
+repo_url: https://code.frytea.com/songtianlun/PlanAssistant-help
+edit_uri: "https://code.frytea.com/songtianlun/PlanAssistant-help/edit/master/docs"
+
+
+# Copyright
+copyright: 'Copyright &copy; 2018 - 2020 frytea'
+
+
+theme:
+  name: 'material'
+  palette:
+    primary: Brown
+    accent: 'Deep Orange'
+  font:
+    text: Cormorant
+    code: Cormorant Mono
+  favicon: assets/images/favicon.png
+  logo:
+    icon: 'timeline'
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: false
+
+# Page tree
+nav:
+  - index: index.md
+  - Video: video.md
